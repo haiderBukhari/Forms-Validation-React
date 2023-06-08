@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  scrollbar-highlight-color: #29f329;
+  /* overflow: hidden; */
+}
+img:hover{
+  /* filter:hue-rotate(890deg); */
+  filter: sepia(10%);
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section1{
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 2px 24px #bdbdbd, -3px -2px 23px #bdbdbd;
+  margin: 20px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
+  /* max-width: 300px; */
+}
+.section1 img{
+  border-radius: 50%;
+  width: 70%;
+  z-index: 90;
+  position: relative;
+}
+.img_section{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+.box-style{
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  width: 56%;
+  height: 169px;
+  background: linear-gradient(#007edf84, #29f329);
+  /* background-color: #f3a0a0; */
+  /* box-shadow: 2px 2px 4px #ccc, -2px -2px 3px #ccc; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section1::after{
+  position: absolute;
+  content: "";
+  top: -0px;
+  left: -0px;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(255, 117, 117);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.main_name{
+  text-align: center;
+  color: rgb(98, 98, 98);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 25px;
+}
+.city{
+  color: rgb(255, 123, 105);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 13px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.reviews{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.reviews i{
+  color: rgb(213, 213, 22);
+  margin: 2px;
+  text-shadow: 0.1px 0.1px 0.1px #333;
+}
+.review_data{
+  text-align: center;
+  color: #2a2a2a;
+  /* padding: 0px 10px; */
+}
+.arrows{
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.arrows i{
+  font-size: 40px;
+  /* padding: 900px; */
+  color: brown;
+}
+#circle{
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: rgb(25, 164, 150);
+}
+.progress-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7px;
+  background: linear-gradient(45deg, #ff67d1be, #3891e0);
+  background-color:rgb(0, 208, 255);
+  transition: width 0.3s;
+  z-index: 1000;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px #ccc;
 }
